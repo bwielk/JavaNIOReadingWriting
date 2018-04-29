@@ -45,13 +45,41 @@ public class DataMain
             //READING THE DATA FROM THE data.dat FILE
 
             RandomAccessFile randomAccessFile = new RandomAccessFile("data.dat", "rwd");
-            byte[] b = new byte[outputBytes.length];
-            randomAccessFile.read(b);
-            System.out.println(new String(b));
+            FileChannel channel = randomAccessFile.getChannel();
+            outputBytes[0] = 'a';
+            outputBytes[1] = 'b';
+            buffer.flip();
+            long numBytesRead = channel.read(buffer);
+            if(buffer.hasArray()){
+                System.out.println("byte buffer = " + new String(buffer.array()));
+            }
 
-            long int1 = randomAccessFile.readInt();
-            long int2 = randomAccessFile.readInt();
-            System.out.println("Int 1 = " + int1 + "; Int 2 = " + int2);
+            //AN EXAMPLE OF AN ABSOLUTE READ
+
+
+
+            //AN EXAMPLE OF A RELATIVE READ
+            //
+            //            intBuffer.flip();
+            //            numBytesRead = channel.read(intBuffer);
+            //            intBuffer.flip();
+            //            System.out.println(intBuffer.getInt());
+            //            intBuffer.flip();
+            //            numBytesRead = channel.read(intBuffer);
+            //            intBuffer.flip();
+            //            System.out.println(intBuffer.getInt());
+            //            intBuffer.flip();
+            //            channel.close();
+            //            randomAccessFile.close();
+
+            //Reading the file with the RandomAccessFile
+//            byte[] b = new byte[outputBytes.length];
+//            randomAccessFile.read(b);
+//            System.out.println(new String(b));
+//
+//            long int1 = randomAccessFile.readInt();
+//            long int2 = randomAccessFile.readInt();
+//            System.out.println("Int 1 = " + int1 + "; Int 2 = " + int2);
 
         }catch(IOException e){
             System.out.println("IOException caught");
