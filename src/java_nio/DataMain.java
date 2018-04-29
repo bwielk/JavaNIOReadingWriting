@@ -55,8 +55,12 @@ public class DataMain
             }
 
             //AN EXAMPLE OF AN ABSOLUTE READ
-
-
+            intBuffer.flip();
+            numBytesRead = channel.read(intBuffer);
+            System.out.println(intBuffer.getInt(0));
+            intBuffer.flip();
+            numBytesRead = channel.read(intBuffer);
+            System.out.println(intBuffer.getInt(0));
 
             //AN EXAMPLE OF A RELATIVE READ
             //
