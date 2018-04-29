@@ -1,21 +1,18 @@
 package java_nio;
 
-import javax.sound.midi.Soundbank;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.nio.BufferOverflowException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
-import java.util.List;
 
 public class DataMain
 {
     public static void main(String[] args) throws IOException {
+
+        //WRITING THE DATA TO THE data.dat FILE
+
         try (FileOutputStream binaryFile = new FileOutputStream("data.dat");
             FileChannel binaryChannel = binaryFile.getChannel()){
 
@@ -44,6 +41,18 @@ public class DataMain
 //                i++;
 //                System.out.println("Line " + i + ": " + line);
 //            }
+
+            //READING THE DATA FROM THE data.dat FILE
+
+            RandomAccessFile randomAccessFile = new RandomAccessFile("data.dat", "rwd");
+            byte[] b = new byte[outputBytes.length];
+            randomAccessFile.read(b);
+            System.out.println(new String(b));
+
+            long int1 = randomAccessFile.readInt();
+            long int2 = randomAccessFile.readInt();
+            System.out.println("Int 1 = " + int1 + "; Int 2 = " + int2);
+
         }catch(IOException e){
             System.out.println("IOException caught");
         }catch(BufferOverflowException e){

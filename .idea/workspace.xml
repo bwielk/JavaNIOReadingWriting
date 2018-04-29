@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d8379f70-253b-4845-b988-37ff2b2e8d64" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaNIO/java_nio/DataMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaNIO/java_nio/DataMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java_nio/DataMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java_nio/DataMain.java" afterDir="false" />
     </list>
@@ -38,8 +37,8 @@
       <file leaf-file-name="DataMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java_nio/DataMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state relative-caret-position="214">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java_nio/DataMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="214">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
